@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Membuat Aplikasi Dengan Excel Macro - BELAJAR</title>
+    <meta name="description" content="Membuat Aplikasi Dengan Excel Macro, , , , , , , 0, , , , , , 0, membuat-aplikasi-dengan-excel-macro, BELAJAR" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Membuat Aplikasi Dengan Excel Macro - BELAJAR" />
+    <meta property="og:description" content="Membuat Aplikasi Dengan Excel Macro, , , , , , , 0, , , , , , 0, membuat-aplikasi-dengan-excel-macro, BELAJAR" />
+    <meta property="og:site_name" content="BELAJAR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Membuat Aplikasi Dengan Excel Macro - BELAJAR" />
+    <meta name="twitter:description" content="Membuat Aplikasi Dengan Excel Macro, , , , , , , 0, , , , , , 0, membuat-aplikasi-dengan-excel-macro, BELAJAR" />
+    <link rel='stylesheet' id='generate-style-css' href='https://ruangedukasi.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://ruangedukasi.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://ruangedukasi.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://ruangedukasi.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://ruangedukasi.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://ruangedukasi.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://ruangedukasi.github.io">Home</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2"><a
+                            href="https://ruangedukasi.github.io/page/dmca.html">DMCA</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3"><a
+                            href="https://ruangedukasi.github.io/page/privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://ruangedukasi.github.io" rel="home"> BELAJAR</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Membuat Aplikasi Dengan Excel Macro</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">mayacomel52</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Membuat+Aplikasi+Dengan+Excel+Macro" alt="Membuat Aplikasi Dengan Excel Macro">
+                    </div>
+                    <p></p>
+                    <p>jelaskan langkah langkah membuat macro pada Excel</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-langkah-langkah-membuat-macro-pada-excel">1.
+                                            jelaskan langkah langkah membuat macro pada Excel</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-langkah-langkah-membuat-macro-pada-excel%e2%80%8b">2.
+                                            Jelaskan langkah-langkah membuat macro pada Excel​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-langkah-langkah-membuat-macro-pada-excel%e2%80%8b">3.
+                                            jelaskan langkah langkah membuat Macro pada Excel​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-langkah-membuat-bingkai-dalam-aplikasi-excel-2007">4.
+                                            Tuliskan langkah membuat bingkai 
+dalam aplikasi excel 2007</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#bagaimana-cara-membuat-aplikasi-microsoft-excel">5.
+                                            bagaimana cara membuat aplikasi microsoft excel?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#program-aplikasi-microsoft-excel-dibuat-oleh">6.
+                                            program aplikasi microsoft excel dibuat oleh....</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-langkah-langkah-membuat-aplikasi-menu-di-microsoft-excel%e2%80%8b">7.
+                                            jelaskan langkah-langkah membuat aplikasi menu di Microsoft Excel!​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-perintah-untuk-menyimpan-lembar-kerja-ke-beberapa-format-yang-dapat-di-akses-dengan-mudah-adalah-a-excel-binary-workbookb-excel-macro-enabled-workbookc-excel-workbookd-other-format2-perintah-yang">8.
+                                            1.Perintah untuk menyimpan Lembar kerja ke Beberapa Format Yang dapat di akses Dengan Mudah, Adalah..A.Excel Binary WorkBookB.Excel Macro Enabled WorkBookC.Excel WorkBookD.Other Format2.Perintah yang di gunakan untuk menyimpan dokumen dalam format file default, adalah..A. Excel WorkBookB. Excel Macro-EnabledC. Excel Binary WD. Excel 97-2003</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sejarah-singkat-macro-pada-excel%e2%80%8b">9.
+                                            sejarah singkat macro pada Excel?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tipe-dalam-penyimpanan-yang-digunakan-untuk-menyimpan-file-yang-terdapat-macro-didalamnya-dan-macro-yang-sudah-dibuat-akan-tersimpan-di-dalam-file-yaitu-tipe%e2%80%a6-pilih-salah-satu-a-excel-bina">10.
+                                            Tipe dalam penyimpanan yang digunakan untuk menyimpan file yang terdapat macro didalamnya dan macro yang sudah dibuat akan tersimpan di dalam file, yaitu tipe…. Pilih salah satu: a. Excel Binary Workbook b. Excel Macro-Enable Workbook c. Excel Workbook d. Excel Add-In​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-jelaskan-langkah-langkah-merekam-macro-pada-ms-excel2-jelaskan-langkah-langkah-menjalankan-macro-pada-ms-excel3-jelaskan-cara-membuat-perintah-macro-untuk-mengatur-angka-dalam-bentuk-mata-uan">11.
+                                            1. Jelaskan langkah langkah merekam macro pada Ms. Excel!2. Jelaskan langkah langkah menjalankan macro pada Ms. Excel!3. Jelaskan cara membuat perintah macro untuk mengatur angka dalam bentuk mata uang rupiah!</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#langkah-langkah-membuat-aplikasi-kalkulator-di-microsost-excel%e2%80%8b">12.
+                                            Langkah langkah membuat aplikasi kalkulator di microsost excel​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#membuat-tabel-di-aplikasi-perangkat-lunak-excel-dengan-klik">13.
+                                            Membuat tabel di aplikasi perangkat lunak excel dengan klik</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-lima-toolbox-yang-digunakan-untuk-membuat-formulir-penilaian-pada-macro-excel">14.
+                                            Tuliskan lima toolbox yang digunakan untuk membuat formulir penilaian pada Macro Excel! </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#buatlah-di-aplikasi-excel%e2%80%8b">15.
+                                            Buatlah di aplikasi excel​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#program-apa-saja-yang-bisa-dibuat-dengan-macro-word">16.
+                                            Program apa saja yang bisa dibuat dengan macro word?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#bagaimana-cara-mengatasi-program-macro-excel-yang-error">17.
+                                            Bagaimana cara mengatasi program macro excel yang error?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-fungsi-macro-pada-komputer-dan-program-apa-untuk-membuat-macro">18.
+                                            Apa fungsi macro pada komputer dan program apa untuk membuat macro?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-langkah-langkah-membuat-gambar-dalam-aplikasi-microsoft-excel%e2%80%8b">19.
+                                            jelaskan langkah-langkah membuat gambar dalam aplikasi Microsoft Excel​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-kegunaan-dari-macro-excel-sihkalau-bisa-jawabnya-pakai-penjelasan-yaaa-mksh">20.
+                                            Apa kegunaan dari macro excel sih?kalau bisa , jawabnya pakai penjelasan yaaa. Mksh</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-langkah-langkah-membuat-aplikasi-menu-pada-microsoft-excel">21.
+                                            jelaskan langkah langkah membuat aplikasi menu pada microsoft excel</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-perbedaan-aplikasi-yg-dibuat-dengan-ms-excel">22.
+                                            Apa perbedaan aplikasi yg dibuat dengan ms excel</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#kekurangan-macro-excel">23.
+                                            Kekurangan macro Excel</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#memberi-perintah-macro-pada-ms-excel-sebutkan-fungsi-dan-hasil-dari-perintah-macro-tersebut">24.
+                                            Memberi perintah Macro pada Ms. Excel. sebutkan fungsi dan hasil dari perintah macro tersebut.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-langkah-langkah-membuat-aplikasi-identitas-di-microsoft-excel%e2%80%8b">25.
+                                            jelaskan langkah-langkah membuat aplikasi identitas di Microsoft Excel​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#langkah-membuat-aplikasi-word-dan-excel">26.
+                                            langkah membuat aplikasi word dan excel</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-rumus-membuat-program-macro-di-excel-simpan-tambah-hapus-cari">27.
+                                            apa rumus membuat program macro di excel, simpan tambah, hapus, cari</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-langkah-langkah-membuat-shortcut-aplikasi-excel-pada-desktop">28.
+                                            Sebutkan langkah-langkah membuat shortcut aplikasi Excel pada desktop</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#fasilitas-yang-dimiliki-microsoft-excel-yang-digunakan-untuk-membuat-perintah-atau-merekam-perintah-berupa-kode-baris-perintah-yang-menggunakan-bahasa-vba-merupakan-pengertian-dari-a-excel-macro">29.
+                                            Fasilitas yang dimiliki Microsoft Excel yang digunakan untuk membuat perintah atau merekam perintah berupa kode (baris perintah) yang menggunakan bahasa VBA, merupakan pengertian dari..a . Excel Macronizeb. Macronizec. Data Macrod. Excel Macro​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#bagaimana-cara-mengunakan-macro-di-exceljelaskan-dengan-lengkap">30.
+                                            Bagaimana cara mengunakan macro di excel?jelaskan dengan lengkap!</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-beberapa-bentuk-laporan-yang-dapat-dibuat-menggunakan-aplikasi-ms-excel">31.
+                                            sebutkan beberapa bentuk laporan yang dapat dibuat menggunakan aplikasi ms excel</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#program-aplikasi-microsoft-excel-dibuat-oleh">32.
+                                            program aplikasi microsoft excel dibuat oleh....</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-4-manfaat-macro-pada-ms-excel">33.
+                                            jelaskan 4 manfaat macro pada ms excel</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#format-file-yang-dibuat-menggunakan-aplikasi-ms-excel-2013-adalah%e2%80%8b">34.
+                                            format file yang dibuat menggunakan aplikasi MS Excel 2013 adalah​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-perbedaan-antara-microsoft-excel-dengan-macro-excel-jelaskan">35.
+                                            Apa perbedaan antara microsoft excel dengan macro excel ? Jelaskan !</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tipe-file-excel-yang-mengandung-macro%e2%80%8b">36.
+                                            tipe file excel yang mengandung macro​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#rumus-macro-excel-komputer">37.
+                                            rumus macro excel komputer</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-belajar-vba-macro-excel-2010">38.
+                                            Sebutkan belajar vba macro excel 2010</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#cara-membuat-aplikasi-persediaan-di-excel">39.
+                                            Cara membuat aplikasi persediaan di excel</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#bagaimana-cara-membuat-nyaatolongg-harus-segera-di-kirimkan-kaakkaplikasi-excel%e2%80%8b">40.
+                                            bagaimana cara membuat nyaaTolongg harus segera di kirimkan Kaakk#Aplikasi Excel​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="jelaskan-langkah-langkah-membuat-macro-pada-excel">
+                            1. jelaskan langkah langkah membuat macro pada Excel</h2><br />
+                        <p>sebelum anda melakukan langkah-langkah ini kemungkinan pada menu tab excel anda tidak terdapat menu tab developr karena secara default lembar kerja microsoft excel tidak ada menu developernya jika memang belum anda setting. sedangkan untuk menambah atau mengaktifkan menu developer tersebut silahkan anda baca tutorialnya di bawah ini
+</p><p>
+</p><p>Cara menambah tab developer pada excel
+</p><p>
+setelah menu tab anda terdapat menu developernya maka silahkan anda lanjutkan langkah-langkah membuat macro pada excel di bawah ini:
+</p><p>buka program aplikasi microsoft excel anda
+</p><p>letakkan kursor di awal cell dan pilih menu developer &gt;&gt; insert &gt;&gt; active x controls &gt;&gt; command button dan buatlah sebuah kotak dengan kursort anda
+</p><p>lalu klik kanan pilih view mode
+</p><p>
+</p><p>kemudin jika sudah terbuka jendela macro silahkan anda tambahkan kode Range("a1").Value = "contoh" di antara kata Private Sub CommandButton1_Click() dengan End Sub sehingga secara lengkap kodenya menjadi seperti berikut : Private Sub CommandButton1_Click()
+</p><p>Range("a1").Value = "contoh"
+</p><p>End Sub untuk kata "contoh" bisa anda rubah sesuai kebutuhan anda </p><p>
+Close jendela kemudian klik sembarang untuk melihat hasil, jika anda berhasil akan menghasilkan kata contoh pada range a1 seperti pada gambar berikut:
+</p><br /><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-langkah-langkah-membuat-macro-pada-excel%e2%80%8b">
+                            2. Jelaskan langkah-langkah membuat macro pada Excel​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Cara Sederhana Membuat Macro Excel</p><p>Klik kanan di manapun pada Ribbon, dan kemudian klik Customize Ribbon.</p><p>Di bawah Customize Ribbon, di sisi kanan kotak dialog, pilih tab Utama (jika perlu).</p><p>Periksa kotak centang Developer.</p><p>Click OK.</p><p>Anda dapat menemukan tab Pengembang sebelah tab View.</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-langkah-langkah-membuat-macro-pada-excel%e2%80%8b">
+                            3. jelaskan langkah langkah membuat Macro pada Excel​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>cara sederhana membuat macro Excel </p><p></p><p>klik kanan dimanapun Ribbon ,dan kemudian klik kustommize Ribbon. </p><p></p><p>Di bawah pilih tab utama (jika perlu) </p><p></p><p>periksa kota centang Developer.cklich ok.</p><p><strong>Penjelasan:</strong></p><p>maaf kalo ada salah </p><br />
+                                            <h2 class="ez-toc-section" id="tuliskan-langkah-membuat-bingkai-dalam-aplikasi-excel-2007">
+                            4. Tuliskan langkah membuat bingkai 
+dalam aplikasi excel 2007</h2><br />
+                        1. Buka MS. Excel 2007 nya.<br />2. Lalu klik pada menu HOME &gt; Button Border &gt; lalu pilih More Border.<br />3. Lalu pilih garis yang diinginkan untuk dijadikan bingkai.<br />4. Lalu klik OK.<br />
+                                            <h2 class="ez-toc-section" id="bagaimana-cara-membuat-aplikasi-microsoft-excel">
+                            5. bagaimana cara membuat aplikasi microsoft excel?</h2><br />
+                        Masuk Ms. Excel dan buat 3 buah sheet dengan masing masing nama sheet "Utama, Main, Stock, dan Laba". Untuk sheet utama jangan diisi data apapun namun beri warna background agar lebih menarik.<br /><br />Pada sheet Main, buat tabel transaksi seperti terlihat pada gambar berikut<br /><br />Pada cells F7 ketikan =IF(C7="","",VLOOKUP(C7,stock!$B$4:$C$23,2,FALSE))<br />pada cell G7 ketikan =IF(D7="","",VLOOKUP(C7,stock!$B$4:$F$24,3,FALSE))<br />pada cells H7 ketikkan =IF(E7="","",VLOOKUP(C7,stock!$B$4:$E$23,4,FALSE))<br />pada cells I7 ketikkan =IF(D7="","",G7*D7+H7*E7)<br />pada cells J7 ketikan =IF( E7="","",IF(K7-D7-E7*L7&lt;0,"stock kurang","ada"))<br />pada cells I20 ketikkan =IF(I7="","",SUM(I7:I19)) dan<br />pada cell I22 ketikkan =IF(I20="","",I21-I20)<br /><br />Pada sheets Stock buat database barang seperti berikut<br />Pada sheet Laba buat tabel seperti pada gambar berikut<br /><br />Setelah tabel laba terbuat ketikan rumus di cell C3 berikut=IF(main!C7="","",VLOOKUP(main!C7,stock!$B$4:$H$23,7,FALSE)) dan di cells D3 ketikan =IF(main!I7="","",(main!I7-((main!D7)+(main!E7*main!L7))*C3))<br /><br />Agar program aplikasi kasir lebih menarik Anda harus sedikit membuat macro VBA untuk membuat tombol pada sheet Main. Buat tombol Barang, Laba, dan Hapus Data dan buat macro copykan script berikut :<br /><br />Sub DeleteStuff()<br />Dim c As Range<br />For Each c In Range("C7:E19")<br />If Not IsNumeric(c) Then c.ClearContents<br />Next c<br />End Sub<br /><br />Sub barang()<br />Sheets("stock").Select<br />End Sub<br />Sub laba()<br />Sheets("laba").Select<br />End Sub<br />Sub Auto_Open()<br />UserForm1.Show<br />End Sub<br /><br />langkah berikutnya Anda harus membuat menu agar ketika membuka file aplikasi kasir ini tampilan pertama yang muncul adalah menu utama dengan cara klik menu developer kemudian view code dan buat form seperti biasa, tampilannya kira-kira seperti berikut<br /><br />Buat script VBA seperti berikut<br />Private Sub CommandButton1_Click()<br />Sheets("main").Select<br />Range("A1").Select<br />End Sub<br /><br />Private Sub CommandButton2_Click()<br />Sheets("stock").Select<br />Range("A1").Select<br />End Sub<br /><br />Private Sub CommandButton3_Click()<br />Sheets("laba").Select<br />Range("A1").Select<br />End Sub<br /><br />Private Sub CommandButton4_Click()<br />Me.Hide<br />End Sub<br /><br />Langkah terkhir coba Anda isikan data penjualan transaksiMaksudnya?? kalau buat aplikasi ga bisa bisanya beli mungkin seharga 700.000 untuk 3 PC.. <br />
+                                            <h2 class="ez-toc-section" id="program-aplikasi-microsoft-excel-dibuat-oleh">
+                            6. program aplikasi microsoft excel dibuat oleh....</h2><br />
+                        kalo ngak salah doug klunder <br />Adalah microsoft office<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-langkah-langkah-membuat-aplikasi-menu-di-microsoft-excel%e2%80%8b">
+                            7. jelaskan langkah-langkah membuat aplikasi menu di Microsoft Excel!​</h2><br />
+                        <p><strong>Penjelasan:</strong></p><p>1.Buka lembar kerja excel kita.</p><p>2.Pada lembar kerja, kita tambahkan beberapa objek dengan menu insert.</p><p>3.Kemudian berikan link kepada objek-objek tersebut.</p><p>4.Berikan link pada objek kepada sheet lain atau dokumen lain.</p><p></p><p>#jadikan jawaban tercerdas # </p><p>#folow aku # </p><br />
+                                            <h2 class="ez-toc-section" id="1-perintah-untuk-menyimpan-lembar-kerja-ke-beberapa-format-yang-dapat-di-akses-dengan-mudah-adalah-a-excel-binary-workbookb-excel-macro-enabled-workbookc-excel-workbookd-other-format2-perintah-yang">
+                            8. 1.Perintah untuk menyimpan Lembar kerja ke Beberapa Format Yang dapat di akses Dengan Mudah, Adalah..A.Excel Binary WorkBookB.Excel Macro Enabled WorkBookC.Excel WorkBookD.Other Format2.Perintah yang di gunakan untuk menyimpan dokumen dalam format file default, adalah..A. Excel WorkBookB. Excel Macro-EnabledC. Excel Binary WD. Excel 97-2003</h2><br />
+                        <p><strong>1. Perintah untuk menyimpan Lembar kerja ke Beberapa Format Yang dapat di akses Dengan Mudah, Adalah..</strong></p><p><strong>Jawaban:</strong></p><p>A.Excel Binary WorkBook</p><p><strong>Penjelasan:</strong></p><p>Excel Binary Workbook, yaitu perintah untuk menyimpan lembar kerja ke beberapa format dan diyakini dapat diakses dengan mudah.</p><p></p><p><strong>2. Perintah yang di gunakan untuk menyimpan dokumen dalam format file default, adalah..</strong></p><p><strong>Jawaban:</strong></p><p>A. Excel WorkBook</p><p><strong>Penjelasan:</strong></p><p>Excel Workbook, adalah perintah menyimpan dokumen dalam format file default dan Microsoft Excel 2007.</p><br />
+                                            <h2 class="ez-toc-section" id="sejarah-singkat-macro-pada-excel%e2%80%8b">
+                            9. sejarah singkat macro pada Excel?​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p> macro pada Excel adalah fitur yang memungkinkan pengguna untuk merekam dan memutar ulang serangkaian tindakan yang sering dilakukan dalam program Excel. Fitur ini pertama kali diperkenalkan pada tahun 1993 dalam Microsoft Excel versi 5.0 dan menjadi semakin populer sejak itu. Dengan adanya fitur macro, pengguna dapat menghemat waktu dan meningkatkan efisiensi dalam melakukan tindakan-tindakan yang sering dilakukan dalam program Excel. Saat ini, pengguna juga dapat mengakses dan mengedit kode makro secara langsung untuk membuat makro yang lebih kompleks dan disesuaikan dengan kebutuhan mereka.</p><p></p>ppppp:<p>Macro pada Excel adalah fitur yang memungkinkan pengguna untuk merekam dan memutar ulang serangkaian tindakan yang sering dilakukan dalam program Excel, seperti memformat data, menghitung rumus, dan menyimpan file. Fitur ini pertama kali diperkenalkan pada tahun 1993 dalam Microsoft Excel versi 5.0 dan menjadi semakin populer sejak itu.</p><p></p><p>Sebelum adanya fitur macro, pengguna harus memasukkan setiap tindakan secara manual, yang memakan waktu dan bisa berisiko kesalahan manusia. Dengan adanya fitur macro, pengguna dapat merekam serangkaian tindakan dan memutar ulangnya dengan mudah, sehingga dapat menghemat waktu dan meningkatkan efisiensi.</p><p></p><p>Fitur macro pada Excel terus berkembang seiring waktu, dan saat ini pengguna dapat mengakses dan mengedit kode makro secara langsung untuk membuat makro yang lebih kompleks dan disesuaikan dengan kebutuhan mereka.</p><br />
+                                            <h2 class="ez-toc-section" id="tipe-dalam-penyimpanan-yang-digunakan-untuk-menyimpan-file-yang-terdapat-macro-didalamnya-dan-macro-yang-sudah-dibuat-akan-tersimpan-di-dalam-file-yaitu-tipe%e2%80%a6-pilih-salah-satu-a-excel-bina">
+                            10. Tipe dalam penyimpanan yang digunakan untuk menyimpan file yang terdapat macro didalamnya dan macro yang sudah dibuat akan tersimpan di dalam file, yaitu tipe…. Pilih salah satu: a. Excel Binary Workbook b. Excel Macro-Enable Workbook c. Excel Workbook d. Excel Add-In​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>b. Excel Macro-Enable Workbook</p><p><strong>Penjelasan:</strong></p><p>Berikut ini sedikit penjelasan dalam penggunaannya.</p><p>1. Excel Workbook, Menyimpan dengan tipe ini seperti menyimpan file excel atau workbook pada umumnya. Pada file ini tidak terdapat Macro.</p><p>2. Excel Macro-Enable Workbook, Menyimpan dengan tipe ini digunakan untuk menyimpan file yang terdapat macro didalamnya. Macro yang sudah dibuat akan tersimpan di dalam file.</p><p>3. Excel Binary Workbook, Menyimpan dengan tipe ini digunakan untuk menyimpan file yang terdapat macro didalamnya akan tetapi macro akan tersimpan pada system Microsoft Office Excel.</p><p>4. Excel Add-In, Menyimpan dengan tipe ini digunakan untuk menyimpan file macro yang dapat anda gunakan sebagai Add-in atau program tambahan dalam Program Excel.</p><p>Langkah-langka Cara menyimpan file Macro :</p><p>1. Lakukan Penyimpanan dengan tombol SAVE</p><p>2. Akan tampil peringatan “the following features cannot be saved in Macro-free workboks” peringatan ini menginformasikan bahwa file ini terdapat VB Project (macro). Jika anda pilih Yes maka Macro yang sudah dibuat akan dihapus, dikarenakan workbook biasa tidak diperkenenkan untuk menyimpan macro.</p><p>3. Pilih No Untuk menyimpan macro.</p><p>4. Lakukan penyimpanan didalam folder tujuan. Ubahlah Save as Type Menjadi Excel macro-enable Workbook (xlsm).</p><p>5. Klik Save</p><p>maaf kalau salah</p><br />
+                                            <h2 class="ez-toc-section" id="1-jelaskan-langkah-langkah-merekam-macro-pada-ms-excel2-jelaskan-langkah-langkah-menjalankan-macro-pada-ms-excel3-jelaskan-cara-membuat-perintah-macro-untuk-mengatur-angka-dalam-bentuk-mata-uan">
+                            11. 1. Jelaskan langkah langkah merekam macro pada Ms. Excel!2. Jelaskan langkah langkah menjalankan macro pada Ms. Excel!3. Jelaskan cara membuat perintah macro untuk mengatur angka dalam bentuk mata uang rupiah!</h2><br />
+                        jawaban 1<br />1.Anda harus pertama mengaktifkan makro di Excel. Untuk melakukan ini:<br /><br />Pada tab Pengembang, di grup Kode, klik Keamanan Makro.<br /><br />Di bawah Pengaturan Makro, klik Aktifkan semua makro (tidak direkomendasikan, kode yang kemungkinan berbahaya dapat dijalankan), lalu klik OK.<br /><br />PERHATIAN: Kode berbahaya makro secara serius bisa merusak komputer Anda. Untuk membantu mencegah kode yang kemungkinan berbahaya berjalan, kami menyarankan bahwa Anda memiliki aplikasi pemindaian virus diinstal, dan kembali ke default Pengaturan makro setelah Anda selesai bekerja dengan makro.<br /><br />Pada tab Pengembang, di grup Kode, klik Rekam Makro.<br /><br />-ATAU-<br /><br />Tekan Alt + T + M + R.<br /><br /><br />Dalam kotak nama makro , masukkan nama untuk makro. Membuat nama deskriptif mungkin sehingga Anda bisa dengan cepat menemukan jika Anda membuat makro lebih dari satu.<br /><br />CATATAN: Karakter pertama dari nama makro harus berupa huruf. Karakter berikutnya bisa berupa karakter huruf, angka, atau garis bawah. Spasi tidak bisa digunakan dalam nama makro; karakter garis bawah berfungsi baik sebagai pemisah kata. Jika Anda menggunakan nama makro yang juga merupakan referensi sel, Anda mungkin mendapatkan pesan kesalahan bahwa nama makro tidak valid.<br /><br />Untuk menetapkan kombinasi Control (Ctrl) tombol pintasan untuk menjalankan makro, dalam kotak tombol pintasan , ketik huruf apa pun (baik huruf besar atau huruf kecil akan berfungsi) yang ingin Anda gunakan. Sebaiknya gunakan Ctrl + Shift (huruf besar) tombol kombinasi, karena tombol pintasan akan menimpa tombol pintasan Excel default yang sama saat buku kerja yang berisi makro terbuka. Sebagai contoh, jika Anda menggunakan Ctrl + z (Batalkan), Anda akan kehilangan kemampuan untuk Batalkan dalam contoh Excel.<br /><br />Di daftar Simpan makro di , pilih tempat Anda ingin menyimpan makro.<br /><br />Secara umum, Anda akan menyimpan makro Anda di lokasi Buku kerja ini , tapi jika Anda ingin makro akan tersedia setiap kali Anda menggunakan Excel, pilih Buku kerja makro pribadi. Saat Anda memilih Buku kerja makro pribadi, Excel membuat buku kerja makro pribadi yang tersembunyi (Personal.xlsb) jika belum ada, dan menyimpan makro di buku kerja ini. Di Windows 10, Windows 7dan Windows Vista, buku kerja ini disimpan dalam C:\Users\user name\AppData\Local\Microsoft\Excel\XLStart folder. Di Microsoft Windows XP, buku kerja ini disimpan di C:\Documents and Settings\user name\Application Data\Microsoft\Excel\XLStart folder. Buku kerja di XLStart folder dibuka secara otomatis setiap kali Excel dimulai, dan kode apa pun yang sudah Anda simpan di buku kerja makro pribadi akan tercantum di dialog makro, yang dijelaskan di bagian berikutnya. Untuk informasi selengkapnya, lihat menyimpan makro.<br /><br />Dalam kotak Deskripsi , secara opsional Ketik deskripsi singkat tentang apa makro.<br /><br />Meskipun bidang Deskripsi opsional, sebaiknya Anda masukkan salah satu. Juga, cobalah untuk memasukkan Deskripsi bermakna dengan informasi apa pun yang mungkin berguna untuk Anda atau pengguna lain yang akan menjalankan makro. Jika Anda membuat banyak makro, Deskripsi bisa membantu Anda dengan cepat mengidentifikasi makro yang melakukan apa, jika tidak Anda mungkin harus menebak.<br /><br />Klik OK untuk memulai perekaman.<br /><br />Melakukan tindakan yang Anda inginkan untuk merekam.<br /><br />Pada tab pengembang , dalam grup kode , klik Hentikan perekaman   .<br /><br />-ATAU-<br /><br />Tekan Alt + T + M + R.<br />
+                                            <h2 class="ez-toc-section" id="langkah-langkah-membuat-aplikasi-kalkulator-di-microsost-excel%e2%80%8b">
+                            12. Langkah langkah membuat aplikasi kalkulator di microsost excel​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1.    Silahkan anda membuka microsoft Excel yang anda miliki. Versi berapapun, karena sama saja, tetapi tim Tutorial Excel kali ini menggunakan microsoft Office 2013
+</p><p>2.    Jika anda sudah membuka lembar baru microsoft Excel, silahkan anda memilih tombol menu Developer pada menu Ribbon, dan jika pada Ms. Excel anda belum terdapat menu Developers, anda dapat memunculkannya dengan cara membuka menu File atau dengan cara menekan logo Ms. Office di pojok kiri atas, pilih Option, dan ceklist Developer Menu.  </p><p>
+</p><p>
+</p><p>3.    Selanjutnya, pada tab menu Ribbon Developes, silahkan anda memilih menu Visual Basic.
+</p><p>
+</p><p>Sehingga muncul jendela pop-up baru seperti berikut:
+</p><p>
+</p><p>4.    Selanjutnya silakan memasukkan perintah InsertUserform, sehingga muncul perintah jendela pop-up userform
+</p><p>
+</p><p>5.    Selanjutnya buatlah CommandButton sebanyak enam buah, dan 3 buah textbook menggunakan tools tersebut.
+</p><p>
+</p><p>6.    Selanjutnya, anda dapat melakukan double klik pada setiap tombol command yang telah anda buat sebelumnya, untuk diisi kode seperti di bawa ini
+</p><p>
+</p><p>
+</p><p>Private Sub bagi_Click()
+</p><p>hasil = A / B
+</p><p>End Sub
+</p><p>
+</p><p>Private Sub hapus_Click()
+</p><p>A = ""
+</p><p>B = ""
+</p><p>hasil = ""
+</p><p>End Sub
+</p><p>
+</p><p>Private Sub kali_Click()
+</p><p>hasil = A * B
+</p><p>End Sub
+</p><p>
+</p><p>Private Sub minus_Click()
+</p><p>hasil = A - B
+</p><p>End Sub
+</p><p>
+</p><p>Private Sub pangkat_Click()
+</p><p>hasil = A ^ B
+</p><p>End Sub
+</p><p>
+</p><p>Private Sub plus_Click()
+</p><p>hasil = Val(A) + Val(B)
+</p><p>End Sub
+</p><p>
+</p><p>7.    Anda juga dapat melakukan modifikasi warna, background, jenis font, dan sebagainya. Melalui menu yang terdapat di samping kiri, agar terlihat lebih cantik dan elegan sesuai selera anda.
+</p><p>
+</p><p>Nah, setelah selesai melakukan semuanya, anda tinggal menjalankan aplikasi buatan anda melalui perinta Run.
+</p><p></p><p>  Yang aku inget sih gitu .. :)</p><p></p><p><strong>Penjelasan:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="membuat-tabel-di-aplikasi-perangkat-lunak-excel-dengan-klik">
+                            13. Membuat tabel di aplikasi perangkat lunak excel dengan klik</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Untuk membuat tabel pada Excel dengan klik insert table</p><p></p><p><strong>Penjelasan:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="tuliskan-lima-toolbox-yang-digunakan-untuk-membuat-formulir-penilaian-pada-macro-excel">
+                            14. Tuliskan lima toolbox yang digunakan untuk membuat formulir penilaian pada Macro Excel! </h2><br />
+                        <p><strong>Jawaban:</strong></p><p>pointer</p><p>button </p><p>check box</p><p>list box</p><p>progress bar</p><p></p><p><strong>Penjelasan:</strong></p><p>semoga dikasih jawaban tercerdas</p><br />
+                                            <h2 class="ez-toc-section" id="buatlah-di-aplikasi-excel%e2%80%8b">
+                            15. Buatlah di aplikasi excel​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>karena kamu tidak menjelaskan menggunakan formula apa, saya asumsikan kamu menggunakan MATCH dan INDEX   </p><br />
+                                            <h2 class="ez-toc-section" id="program-apa-saja-yang-bisa-dibuat-dengan-macro-word">
+                            16. Program apa saja yang bisa dibuat dengan macro word?</h2><br />
+                        <p>Macro word dapat disebut juga dengan Microsoft Word.</p><p>PERTANYAAN:</p><p>Program apa saja yg bisa dibuat dengan macro word/Microsoft word?</p><p>JAWABAN:</p><p>Banyak contoh dokumen yang dapat dibuat dengan microsoft word... </p><p>contoh nya membuat skripsi, karya ilmiah, lapporan tertulis, surat lamaran kerja, pengumuman penting, dan sebagainya :)</p><p></p><p></p><p>#SEMOGAMEMBANTU </p><p>MAAF KALAU SALAH</p><p>^_^</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="bagaimana-cara-mengatasi-program-macro-excel-yang-error">
+                            17. Bagaimana cara mengatasi program macro excel yang error?</h2><br />
+                        <p>contohnya/gambar gak ada</p><br />
+                                            <h2 class="ez-toc-section" id="apa-fungsi-macro-pada-komputer-dan-program-apa-untuk-membuat-macro">
+                            18. Apa fungsi macro pada komputer dan program apa untuk membuat macro?</h2><br />
+                        fungsinya mempermudah pekerjaan :)<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-langkah-langkah-membuat-gambar-dalam-aplikasi-microsoft-excel%e2%80%8b">
+                            19. jelaskan langkah-langkah membuat gambar dalam aplikasi Microsoft Excel​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Berikut adalah langkah-langkah untuk membuat gambar dalam aplikasi Microsoft Excel:</p><p></p><p>1. Buka Microsoft Excel.</p><p>2. Buka lembar kerja yang ingin Anda masukkan gambar.</p><p>3. Klik tab "Insert".</p><p>4. Di grup "Illustrations", klik tombol "Picture".</p><p>5. Pilih gambar yang ingin Anda masukkan dari komputer Anda.</p><p>6. Gambar akan dimasukkan ke dalam lembar kerja Excel Anda.</p><p></p><p>Anda juga dapat membuat gambar di dalam Microsoft Excel dengan menggunakan fitur "Drawing". Berikut adalah langkah-langkahnya:</p><p></p><p>1. Buka Microsoft Excel.</p><p>2. Buka lembar kerja yang ingin Anda buat gambar.</p><p>3. Klik tab "Insert".</p><p>4. Di grup "Illustrations", klik tombol "Drawing".</p><p>5. Pilih alat yang ingin Anda gunakan untuk membuat gambar.</p><p>6. Mulailah menggambar gambar Anda di dalam lembar kerja Excel.</p><p></p><p>Setelah Anda membuat gambar, Anda dapat mengubah ukuran, posisi, dan formatnya sesuai keinginan.</p><br />
+                                            <h2 class="ez-toc-section" id="apa-kegunaan-dari-macro-excel-sihkalau-bisa-jawabnya-pakai-penjelasan-yaaa-mksh">
+                            20. Apa kegunaan dari macro excel sih?kalau bisa , jawabnya pakai penjelasan yaaa. Mksh</h2><br />
+                        Bisa untuk presentasi,Proposal:) karena itu mencatat semua hitungan atau laporan yang diketik disitu:)<br />#maaf salah<br />#TerimaKasih<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-langkah-langkah-membuat-aplikasi-menu-pada-microsoft-excel">
+                            21. jelaskan langkah langkah membuat aplikasi menu pada microsoft excel</h2><br />
+                        <p>Langkah untuk membuat menu sederhana pada aplikasi microsoft excel <strong>adalah</strong> sebagai berikut</p>Buka lembar kerja excel kitaPada lembar kerja, kita tambahkan beberapa objek dengan menu insertKemudian berikan link kepada objek-objek tersebutBerikan link pada objek kepada sheet lain atau dokumen lain<p>Panduan di atas merupakan panduan yang paling mudah dalam membuat menu sederhana pada microsoft excel.</p>Pembahasan<p>Microsoft excel merupakan software yang digunakan untuk mengolah angka. Dalam menggunakan excel kita juga bisa memunculkan menu-menu yang belum ada secara default ketika menginstall microsoft excel. Cara untuk memunculkan menu tersebut adalah</p>Masuk ke dalam menu excel optionsPilih menu CustomizePilih menu/toolbar yang akan ditambahkanKemudian klik OK<p>Dengan memasukkan toolbar-toolbar yang belum ada, maka kita akan bisa mengakses menu-menu tersebut lebih cepat, sehingga waktu pengerjaan akan lebih cepat.</p>Pelajari lebih lanjut<p>Demikian pembahasan mnegenai cara untuk memberikan menu-meu pada software excel, kita bisa membuat hyperlink pada objek yang kita sisipkan. Selain itu kita bisa menambahkan menu melalui excel option. Untuk mempelajari lebih lanjut mengenai excel dapat dibaca pada link berikut</p><p>1. Perbedaan tampilan excel 2007 dengan excel 2010 https://brainly.co.id/tugas/2848469</p><p>2. Sebutkan menu-menu yang ada di microsoft excel https://brainly.co.id/tugas/1913317</p>Detil jawaban<p><strong>Kelas:</strong> 8 SMP</p><p><strong>Mapel:</strong> TI</p><p><strong>Bab:</strong> Panduan untuk membuat menu pada microsoft excel</p><p><strong>Kode:</strong> 8.11.7</p><p><strong>Kata Kunci:</strong> Panduan untuk membuat menu pada microsoft excel</p><br /><br /><br />
+                                            <h2 class="ez-toc-section" id="apa-perbedaan-aplikasi-yg-dibuat-dengan-ms-excel">
+                            22. Apa perbedaan aplikasi yg dibuat dengan ms excel</h2><br />
+                        <p> </p><p>mas Exel aplikasi pengolah angka </p><p> </p><p></p><p><strong>Jawaban:</strong></p><p>aplikasi pengolah angka</p><br />
+                                            <h2 class="ez-toc-section" id="kekurangan-macro-excel">
+                            23. Kekurangan macro Excel</h2><br />
+                        jika belum tahu rumus dan logika excel akan mengalami kesulitan dalam mengoperasikannya<br /><br />jika salah menggunakan rumus akan berakibat pada kesalahan membaca data<br />
+                                            <h2 class="ez-toc-section" id="memberi-perintah-macro-pada-ms-excel-sebutkan-fungsi-dan-hasil-dari-perintah-macro-tersebut">
+                            24. Memberi perintah Macro pada Ms. Excel. sebutkan fungsi dan hasil dari perintah macro tersebut.</h2><br />
+                        <p> </p><p>Macro adalah Sebuah fasilitas yang dimiliki Microsoft Excel yang dapat digunakan untuk merekam semua tindakan dan perintah yang dilakukan pada program Excel. hasilnya pada saat kita mengakses Cell, Range, Worksheets, dan Workbook</p><p> </p><p>Contoh kegunaan macro adalah apabila kita melakukan pekerjaan yang banyak dan dilakukan secara manual. Dari pada kita membuang-buang waktu dengan mengerjakan pekerjaan yang banyak secara manual, kita bisa merekamnya dengan fungsi macro kemudian melakukan sedikit modifikasi. </p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-langkah-langkah-membuat-aplikasi-identitas-di-microsoft-excel%e2%80%8b">
+                            25. jelaskan langkah-langkah membuat aplikasi identitas di Microsoft Excel​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Langkah untuk membuat menu sederhana pada aplikasi microsoft excel adalah sebagai berikut</p><p></p><p>•Buka lembar kerja excel kita</p><p>•Pada lembar kerja, kita tambahkan beberapa objek dengan menu insert</p><p>•Kemudian berikan link kepada objek-objek tersebut</p><p>•Berikan link pada objek kepada sheet lain atau dokumen lain. </p><p></p><p>Panduan di atas merupakan panduan yang paling mudah dalam membuat menu sederhana pada microsoft excel</p><p><strong>Penjelasan:</strong></p>semoga membantu maaf kalo salah （｡•‿•｡）<br />
+                                            <h2 class="ez-toc-section" id="langkah-membuat-aplikasi-word-dan-excel">
+                            26. langkah membuat aplikasi word dan excel</h2><br />
+                        Siapkan database di ms.excel (bikin file excel-nya, biasanya berisi nama &amp; alamat, atau<br />dll lah yang mau ditampilkan di undangan),<br />2. Atur dokumen yang di ms.word buat baca data dari file exce tsb lewat mail merge.<br />(nah langkah ke-2 ini yang lumayan agak ribet <br />
+                                            <h2 class="ez-toc-section" id="apa-rumus-membuat-program-macro-di-excel-simpan-tambah-hapus-cari">
+                            27. apa rumus membuat program macro di excel, simpan tambah, hapus, cari</h2><br />
+                        hapus min <br />tambah max <br />rata rata average<br />
+                                            <h2 class="ez-toc-section" id="sebutkan-langkah-langkah-membuat-shortcut-aplikasi-excel-pada-desktop">
+                            28. Sebutkan langkah-langkah membuat shortcut aplikasi Excel pada desktop</h2><br />
+                        1. Klik <strong>Start</strong><br />2. Klik <strong>All Programs</strong><br />3. Klik <strong>Microsoft Office</strong><br />4. Klik kanan <strong>Microsoft Office Excel</strong><br />5. Klik <strong>Send To</strong><br />6. Klik <strong>Desktop</strong><br /><br />Semoga Membantu!<br /><br />
+                                            <h2 class="ez-toc-section" id="fasilitas-yang-dimiliki-microsoft-excel-yang-digunakan-untuk-membuat-perintah-atau-merekam-perintah-berupa-kode-baris-perintah-yang-menggunakan-bahasa-vba-merupakan-pengertian-dari-a-excel-macro">
+                            29. Fasilitas yang dimiliki Microsoft Excel yang digunakan untuk membuat perintah atau merekam perintah berupa kode (baris perintah) yang menggunakan bahasa VBA, merupakan pengertian dari..a . Excel Macronizeb. Macronizec. Data Macrod. Excel Macro​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>d. Excel Macro.</p><p></p><p><strong>Penjelasan</strong><strong>:</strong></p><p>Excel Macro adalah fasilitas yang dimiliki Microsoft Excel yang digunakan untuk membuat perintah atau merekam perintah berupa kode (baris perintah) yang menggunakan bahasa VBA (Visual Basic for Applications). Dengan menggunakan Excel Macro, pengguna dapat mengotomatisasi tugas-tugas yang sering dilakukan di Microsoft Excel, sehingga dapat meningkatkan efisiensi dan produktivitas kerja.</p><p></p><p></p><p></p><p><strong>Jawaban:</strong></p><p>d. Excel Macro.</p><p></p><p><strong>Penjelasan:</strong></p><p>Excel Macro merupakan rangkaian instruksi yang terprogram dalam bahasa VBA (Visual Basic for Applications) yang bisa digunakan untuk mengotomatisasi tugas-tugas tertentu pada Microsoft Excel seperti menghitung data atau membuat grafik.</p><br />
+                                            <h2 class="ez-toc-section" id="bagaimana-cara-mengunakan-macro-di-exceljelaskan-dengan-lengkap">
+                            30. Bagaimana cara mengunakan macro di excel?jelaskan dengan lengkap!</h2><br />
+                        Klik Icon Record Macro.Buat Nama Macro (Macro name) : “addFormula”. Tentukan Shortkey jika perlu dan pilih Store macro in : This Workbook. Isi deskripsi macro jika perlu. Klik Ok. Tempatkan Kursor pada E2, lalu masukkan formula : =C2*D2 Tekan Enter.Copy Cell E2 dengan Ctrl + CLalu Blok (sorot) E3 : E6, lalu paste dengan Ctrl + Vtempatkan kursor pada E7 lalu pilih fungsi Autosum  di menu Home. Tekan EnterKembali ke Menu Developer lalu klik Stop Recording.
+Sama seperti contoh pertama, anda dapat melihat kode yang dihasilkan bukalah VBE (Visual Basic Editor) dengan menekan Alt + F11<br /><br />
+                                            <h2 class="ez-toc-section" id="sebutkan-beberapa-bentuk-laporan-yang-dapat-dibuat-menggunakan-aplikasi-ms-excel">
+                            31. sebutkan beberapa bentuk laporan yang dapat dibuat menggunakan aplikasi ms excel</h2><br />
+                        1.daftar nilai ujian sisiwa<br />2.daftar soal ujian siswa<br />3.daftar jawaban soal buku paket <br />
+                                            <h2 class="ez-toc-section" id="program-aplikasi-microsoft-excel-dibuat-oleh">
+                            32. program aplikasi microsoft excel dibuat oleh....</h2><br />
+                        Microsoft office yg membuatnya<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-4-manfaat-macro-pada-ms-excel">
+                            33. jelaskan 4 manfaat macro pada ms excel</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Memasukkan text string.</p><p>Mengotomatisasi tugas yang sering dilakukan.</p><p>Membuat perintah khusus.</p><p>Mengembangkan fungsi worksheet.</p><p></p><p><strong>P</strong><strong>e</strong><strong>n</strong><strong>j</strong><strong>e</strong><strong>l</strong><strong>a</strong><strong>s</strong><strong>a</strong><strong>n</strong><strong> </strong><strong>:</strong></p><p><strong>1</strong><strong>.</strong><strong> </strong>Jika kamu sering perlu untuk memasukkan satu atau beberapa nama kedalam worksheet kamu, maka anda dapat membuat makro untuk melakukan pengetikan tersebut. Kamu dapat memperpanjang konsep ini sejauh yang Kamu suka.</p><p><strong>2</strong><strong>.</strong><strong> </strong>Asumsikan kalo kamu seorang manajer penjualan yang perlu menyiapkan laporan penjualanan akhir yang selalu diminta bos kamu. Ini dapat dilakukan dengan VBA yang kamu ciptakan, sehingga laporan kamu selalu tepat waktu, dan bos kamu akan senang tentunya.</p><p><strong>3</strong><strong>.</strong> VBA juga bisa membantu kamu untuk melakukan tugas yang sering kamu lakukan. Misalnya kamu sering menekan menu satu kemudian menu dua dan mencetak sheet kamu, ini bisa dibundel dalam satu perintah saja dengan bantuan Macro VBA.</p><p><strong>4</strong><strong>.</strong><strong> </strong>Meskipun di Microsoft Excel sudah tersedia banyak macam formula semisal SUM dan AVERAGE, namun kamu bisa membuat rumus atau formula sendiri dengan bantuan VBA.</p><p></p><p>Mohon dikoreksi kalo saya salah:)</p><br />
+                                            <h2 class="ez-toc-section" id="format-file-yang-dibuat-menggunakan-aplikasi-ms-excel-2013-adalah%e2%80%8b">
+                            34. format file yang dibuat menggunakan aplikasi MS Excel 2013 adalah​</h2><br />
+                        <p>Jawaban: .xlsx</p><p></p><p>Penjelasan:Data atau file dengan ekstensi .XLSX adalah sebuah file Microsoft Excel Open XML Spreadsheet yang dibuat memakai aplikasi Microsoft Excel. Namun, karena formatnya open XML, file ini bisa dibuka oleh sejumlah aplikasi, seperti Open Office, Google Docs, hingga Apple Numbers.</p><p></p>extensi file dri Ms Excel 2013 adalah : .xlsx<br /><br />Semoga membantu<br />
+                                            <h2 class="ez-toc-section" id="apa-perbedaan-antara-microsoft-excel-dengan-macro-excel-jelaskan">
+                            35. Apa perbedaan antara microsoft excel dengan macro excel ? Jelaskan !</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Microsoft excel merupakan software keluaran Microsoft yang berfungsi sebagai pengolah kata, sedangkan untuk macro excel merupakan fitur dari Microsoft Excel yang berfungsi untuk menjalankan eksekusi secara otomatis dan dilakukan berdasarkan kode/perintah yang dijalankan.</p><br />
+                                            <h2 class="ez-toc-section" id="tipe-file-excel-yang-mengandung-macro%e2%80%8b">
+                            36. tipe file excel yang mengandung macro​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Jenis File excel</p><p>xlsm : file workbook dengan macro pada Excel versi 2007 sampai dengan 2016. xlt : file template pada Excel versi 1997 – 2003. xltx : file template pada (tanpa macro). xltm : file template pada Excel (dengan macro).</p><p><strong>Penjelasan:</strong></p><p>Maaf kalau salah</p>Yaitu jenis File xlsm<br />
+                                            <h2 class="ez-toc-section" id="rumus-macro-excel-komputer">
+                            37. rumus macro excel komputer</h2><br />
+                        shift+enter <br />smoga bermanfaat<br />
+                                            <h2 class="ez-toc-section" id="sebutkan-belajar-vba-macro-excel-2010">
+                            38. Sebutkan belajar vba macro excel 2010</h2><br />
+                        <p>With Excel VBA you can automate tasks in Excel by writing so called macros. In this chapter, learn how to create a simple macro which will be executed after clicking on a command button. First, turn on the Developer tab.</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="cara-membuat-aplikasi-persediaan-di-excel">
+                            39. Cara membuat aplikasi persediaan di excel</h2><br />
+                        Menu Daftar Barang.<br /> Menu berisi sebuah control berupa form input barang yang berfungsi 
+untuk menambah, menghapus atau mengedit barang yang akan disimpan pada 
+tabel daftar barang. <br />Menu Mutasi Barang<br />Menu ini berisi sebuah control berupa form mutasi barang yang 
+berfungsi untuk melakukan transaksi terhadap keluar dan masuknya barang 
+sehingga akan menghitung sisa barang yang tersedia pada stock jurnal. <br />Menu Laporan<br />Menu ini berisi sebuah form yang berfungsi untuk membuat 
+laporan-laporan sederhana mengenai transaksi-transaksi yang sudah 
+dilakukan terhadap persediaan barang. <br />Form About<br />Form ini berfungsi untuk penjelasan detail tetang aplikasi ini. <br /><br /><br /><br /><br /><br />Menu Daftar Barang. Menu berisi sebuah control berupa form input barang yang berfungsi untuk menambah, menghapus atau mengedit barang yang akan disimpan pada tabel daftar barang. <br /><br /><br /><br />Menu Mutasi Barang. Menu ini berisi sebuah control berupa form mutasi barang yang berfungsi untuk melakukan transaksi terhadap keluar dan masuknya barang sehingga akan menghitung sisa barang yang tersedia pada stock jurnal. <br /><br /><br /><br /><br /><br />Menu LaporanMenu ini berisi sebuah form yang berfungsi untuk membuat laporan-laporan sederhana mengenai transaksi-transaksi yang sudah dilakukan terhadap persediaan barang. Laporan-laporan ini dapat diatur berdasarkan rentang waktu dan jenis atau tipe barang yang Anda inginkan.<br /><br /><br /><br /><br />Form AboutForm ini berfungsi untuk penjelasan detail tetang aplikasi ini. <br /><br /><br /><br /><br />did bawah ini adalah gambar nya : <br />
+                                            <h2 class="ez-toc-section" id="bagaimana-cara-membuat-nyaatolongg-harus-segera-di-kirimkan-kaakkaplikasi-excel%e2%80%8b">
+                            40. bagaimana cara membuat nyaaTolongg harus segera di kirimkan Kaakk#Aplikasi Excel​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Pilih menu insert </p><p>pilih ikon kolom </p><p>dan berapa kolom yang ingin anda buat dan tekan ok</p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/An-2Nxf_Dms?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>ti</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/kurikulum-2013-jawaban-bahasa-inggris.html">Kurikulum 2013 Jawaban Bahasa Inggris</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/contoh-cover-tugas-makalah.html">Contoh Cover Tugas Makalah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/aplikasi-bel-sekolah-otomatis-3-bahasa.html">Aplikasi Bel Sekolah Otomatis 3 Bahasa</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/kunci-jawaban-buku-pr-ips-kelas-7-intan.html">Kunci Jawaban Buku Pr Ips Kelas 7 Intan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/31-cara-membuat-akta-jual-beli-tanah.html">31 Cara Membuat Akta Jual Beli Tanah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/soal-bahasa-indonesia-materi-surat.html">Soal Bahasa Indonesia Materi Surat</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/bahan-ajar-otomatisasi-tata-kelola-30.html">Bahan Ajar Otomatisasi Tata Kelola 30</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/47-pencairan-bantuan-guru-honorer.html">47 Pencairan Bantuan Guru Honorer</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/contoh-pemanfaatan-bahan-ajar-daring-31.html">Contoh Pemanfaatan Bahan Ajar Daring 31</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/kurikulum-2013-jurusan-bahasa.html">Kurikulum 2013 Jurusan Bahasa</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/jurnal-retur-penjualan-metode-perpetual.html">Jurnal Retur Penjualan Metode Perpetual</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/soal-pilihan-ganda-teks-eksposisi-kelas.html">Soal Pilihan Ganda Teks Eksposisi Kelas</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/jurnal-penjualan-adalah.html">Jurnal Penjualan Adalah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/kunci-jawaban-administrasi-pajak-kelas.html">Kunci Jawaban Administrasi Pajak Kelas</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/kunci-jawaban-detik-deti-kelas-6.html">Kunci Jawaban Detik Deti Kelas 6</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/aplikasi-buku-pribadi-siswa.html">Aplikasi Buku Pribadi Siswa</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/contoh-modul-bahan-ajar-sd.html">Contoh Modul Bahan Ajar Sd</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/jawaban-lucu-anak-sd.html">Jawaban Lucu Anak Sd</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/kurikulum-2013-sma-ekonomi-kelas-x.html">Kurikulum 2013 Sma Ekonomi Kelas X</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://ruangedukasi.github.io/soal-geografi-pilihan-ganda-kelas-12.html">Soal Geografi Pilihan Ganda Kelas 12</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://ruangedukasi.github.io"
+                            itemprop="url">BELAJAR</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://ruangedukasi.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://ruangedukasi.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://ruangedukasi.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://ruangedukasi.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+<script type='text/javascript' src='//cloudlessmajesty.com/1d/a7/d8/1da7d80839196eccc4a624ab91e5ccbf.js'></script>
+<script type='text/javascript' src='//cloudlessmajesty.com/8d/be/84/8dbe84c54b7cc5b78aa0e0a1fbdbae07.js'></script>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4777688,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4777688&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>
